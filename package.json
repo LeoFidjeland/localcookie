@@ -1,0 +1,34 @@
+{
+  "author": {
+    "name": "Leo Fidjeland",
+    "email": "leo.fidjeland@gmail.com",
+    "url": "https://github.com/LeoFidjeland"
+  },
+  "name": "localCookie",
+  "description": "localStore emulated in a cookie",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LeoFidjeland/localCookie.git"
+  },
+  "version": "1.0.0",
+  "engines": {
+    "node": ">= v0.2.0"
+  },
+  "scripts": {
+    "test": "./node_modules/karma/bin/karma start"
+  },
+  "main": "./lib/localCookie.js",
+  "dependencies": {},
+  "devDependencies": {
+    "karma": "^0.12.31",
+    "karma-chrome-launcher": "^0.1.7",
+    "karma-expect": "^1.1.0",
+    "karma-mocha": "^0.1.10",
+    "karma-mocha-reporter": "^1.0.0",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "karma-requirejs": "^0.2.2",
+    "mocha": "^2.1.0",
+    "requirejs": "^2.1.16"
+  },
+  "license": "MIT"
+}
