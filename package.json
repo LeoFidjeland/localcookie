@@ -4,7 +4,7 @@
     "email": "leo.fidjeland@gmail.com",
     "url": "https://github.com/LeoFidjeland"
   },
-  "name": "localCookie",
+  "name": "localcookie",
   "description": "localStore emulated in a cookie",
   "repository": {
     "type": "git",
