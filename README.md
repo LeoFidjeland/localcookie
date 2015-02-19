@@ -1,4 +1,4 @@
-# localCookie
+# localcookie
 
 A localStorage implementation in a cookie
 
