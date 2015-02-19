@@ -1,18 +1,14 @@
-# DOMStorage
+# localcookie
 
-See https://github.com/coolaj86/node-dom-storage for a slightly better version of the same thing.
-
-# localStorage
-
-An inefficient, but as W3C-compliant as possible using only pure JavaScript, `localStorage` implementation.
+A localStorage implementation in a cookie
 
 ## Purpose
 
-This is meant for the purpose of being able to run unit-tests and such for browser-y modules in node.
+Use it in browser libs where you want to store session tokens and the like in the cookie instead of in localStorage. So that you can store things across multiple subdomains.
 
 ## Usage
 
-    var localStorage = require('localStorage')
+    var localStorage = require('localcookie')
       , myValue = { foo: 'bar', baz: 'quux' }
       ;
 
@@ -30,28 +26,9 @@ This is meant for the purpose of being able to run unit-tests and such for brows
 
 ## Tests
 
-    null === localStorage.getItem('key');
-
-    0 === localStorage.length;
-    null === localStorage.getItem('doesn't exist');
-    undefined === localStorage['doesn't exist'];
-
-    localStorage.setItem('myItem');
-    "undefined" === localStorage.getItem('myItem');
-    1 === localStorage.length;
-
-    localStorage.setItem('myItem', 0);
-    "0" === localStorage.getItem('myItem');
-
-    localStorage.removeItem('myItem', 0);
-    0 === localStorage.length;
-
-    localStorage.clear();
-    0 === localStorage.length;
+    npm test
 
 TODO / Bugs
 ---
 
-  * Does not persist.
-    * could use `fs.readFileSync` at load and an occasional `fs.writeFile` to write-out localStorage.json
-  * Doesn't not emit `Storage` events
+  * Tests for config
