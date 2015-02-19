@@ -10,14 +10,12 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['mocha', 'requirejs','expect'],
+    frameworks: ['mocha', 'expect'],
 
 
     // list of files / patterns to load in the browser
     files: [
-      'test-main.js',
-      {pattern: 'lib/*.js', included: false},
-      {pattern: 'tests/*.js', included: false}
+      'build/*.js'
     ],
 
 
@@ -57,14 +55,14 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    // browsers: ['PhantomJS_custom'],
-    browsers: ['Chrome'],//Manual tests in chrome
+    browsers: ['PhantomJS_custom'],
+    // browsers: ['Chrome'],//Manual tests in chrome
 
     // you can define custom flags
     customLaunchers: {
       'PhantomJS_custom': {
         base: 'PhantomJS',
-        flags: ['--cookies-file=tests/cookies.txt']
+        flags: ['--cookies-file=build/cookies.txt']
       }
     }
   });

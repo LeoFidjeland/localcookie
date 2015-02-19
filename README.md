@@ -81,6 +81,8 @@ Only strings as values
 
 ## Tests
 
+    npm install
+    grunt
     npm test
 
 TODO / Bugs
